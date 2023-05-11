@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabelas Responsivas</title>
+    <link rel="stylesheet" href="style.min.css">
+
+    <style>
+      *{margin:0; padding: 0; box-sizing: border-box;}
+
+.content{display:flex; margin: auto;}
+
+.rTable{width: 100%; text-align: center;}
+    .rTable thead{background: black; font-weight: bold; color:#fff;}
+    .rTable tbody tr:nth-child(2n){background: #ccc;}
+    .rTable th , .rTable td{padding: 7px 0;}
+
+@media screen and (max-width: 480px){
+    .content{width: 94%;}
+
+    .rTable thead{display:none;}
+    .rTable tbody td{display: flex; flex-direction: column; }
+}
+
+@media only screen and (min-width: 1200px){
+    .content{width:100%;}
+    .rTable tbody tr td:nth-child(1){width:10%;}
+    .rTable tbody tr td:nth-child(2){width:30%;}
+    .rTable tbody tr td:nth-child(3){width:20%;}
+    .rTable tbody tr td:nth-child(4){width:10%;}
+    .rTable tbody tr td:nth-child(5){width:30%;}
+}
+    </style>
+</head>
+
+<body>
+<div class="content">
+    <table class="rTable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Sexo</th>
+                <th>Idade</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Thiago</td>
+                <td>Masculino</td>
+                <td>20</td>
+                <td>webdesignemfoco@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Thaís</td>
+                <td>Feminino</td>
+                <td>19</td>
+                <td>thais@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
