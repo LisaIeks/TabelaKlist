@@ -1,71 +1,347 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tabelas Responsivas</title>
-    <link rel="stylesheet" href="style.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Boxicons CDN Link -->
+ <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
-    <style>
-      *{margin:0; padding: 0; box-sizing: border-box;}
-
-.content{display:flex; margin: auto;}
-
-.rTable{width: 100%; text-align: center;}
-    .rTable thead{background: black; font-weight: bold; color:#fff;}
-    .rTable tbody tr:nth-child(2n){background: #ccc;}
-    .rTable th , .rTable td{padding: 7px 0;}
-
-@media screen and (max-width: 480px){
-    .content{width: 94%;}
-
-    .rTable thead{display:none;}
-    .rTable tbody td{display: flex; flex-direction: column; }
+<style>
+@media screen and (min-width: 600px) {
+    .navbar{
+    display: none;
+  }
+ }
+/* On screens that are 600px wide or less, the background color is olive */
+  @media screen and (max-width: 600px) {
+    body {
+  font-family: "Lato", sans-serif;
 }
 
-@media only screen and (min-width: 1200px){
-    .content{width:100%;}
-    .rTable tbody tr td:nth-child(1){width:10%;}
-    .rTable tbody tr td:nth-child(2){width:30%;}
-    .rTable tbody tr td:nth-child(3){width:20%;}
-    .rTable tbody tr td:nth-child(4){width:10%;}
-    .rTable tbody tr td:nth-child(5){width:30%;}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(#BDD1F9, #CEC8F6, #E0F5F9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
-    </style>
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+}
+
+/*CSS da tabela*/
+/*Configurações da tabela*/
+table{
+    width: 1000px;
+    border-collapse: collapse;
+    padding: auto;
+    margin: auto;
+}
+  
+  
+  td{
+    padding: 20px;
+    border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  }
+  
+  tr.first{
+    background-color: #C8D3E9;
+    color: #5F6776;
+    
+  }
+  
+  tr.colorido{
+    color: #000000;
+    background-color: #E6E8ED;
+  
+  }
+  /*final tabelas*/
+/*Fnal CSS da tabela*/
+</style>
 </head>
-
 <body>
-<div class="content">
-    <table class="rTable">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nome</th>
-                <th>Sexo</th>
-                <th>Idade</th>
-                <th>Email</th>
-            </tr>
-        </thead>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="portugues.html">Portguês</a>
+    <a href="matematica.html">Matemática</a>
+    <a href="portugues.html">Inglês</a>
+  </div>
+  
+  <div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+    
+      <table>
+                  <!--Hierarquia de tabelas simples 
+                         TABLE = tabela 
+                         TABLE ROW = linha da tabela
+                         TABLE DATA = dado da tabela-->
+                 
+                 
+                         <tr class="first"><!--Primeira linha da tabela :)-->
+                             <br>
+                            <br> <td>Estágio</td>
+                             <td>Quantidade</td>
+                             <td>Qtd. Usada</td>
+                             <td>Qtd. a Comprar</td>
+                             <td>Preço</td>
+                             <td>Data Inventário</td>
+                 
+                         </tr>
+                 
+                         <tr class="simples">
+                             <td>ZI</td>
+                             <td>20</td>
+                             <td>5</td>
+                             <td>15</td>
+                             <td>52.50</td>
+                             <td>29/09/2005</td>
+                         </tr>
+                         <tr class="colorido">
+                           <td>ZII</td>
+                           <td>matematica</td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                       </tr>
+                       <tr class="simples">
+                         <td>6A</td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                     </tr>
+                     <tr class="colorido">
+                       <td>5A</td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                   </tr>
+                   <tr class="simples">
+                     <td>4A</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                 </tr>
+                 <tr class="colorido">
+                   <td>3A</td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+               </tr>
+               <tr class="simples">
+                 <td>2A</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               <tr class="colorido">
+                 <td>A</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               <tr class="simples">
+                 <td>B</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               <tr class="colorido">
+                 <td>C</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               <tr class="simples">
+                 <td>D</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               <tr class="colorido">
+                 <td>E</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               
+               <tr class="simples">
+                 <td>F</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               <tr class="colorido">
+                 <td>G</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               <tr class="simples">
+                 <td>H</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               <tr class="colorido">
+                 <td>I</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               <tr class="simples">
+                 <td>J</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               <tr class="colorido">
+                 <td>K</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               <tr class="simples">
+                 <td>L</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               <tr class="colorido">
+                 <td>M</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               <tr class="simples">
+                 <td>N</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               <tr class="colorido">
+                 <td>O</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               <tr class="simples">
+                 <td>ZII</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               <tr class="colorido">
+                 <td>ZII</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               <tr class="simples">
+                 <td>ZII</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+               </tr>
+               
+                          </table>
+              
+  </div>
+  
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+  </script>
+       
 
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Thiago</td>
-                <td>Masculino</td>
-                <td>20</td>
-                <td>webdesignemfoco@gmail.com</td>
-            </tr>
-
-            <tr>
-                <td>2</td>
-                <td>Thaís</td>
-                <td>Feminino</td>
-                <td>19</td>
-                <td>thais@gmail.com</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
 </body>
 </html>
